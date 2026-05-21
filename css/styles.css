@@ -1,0 +1,10 @@
+#box-model{
+    padding: 30px;
+    height:50px;
+    border: solid;
+    border-radius: 30px;
+    border-color: black;
+}
+#table-color{
+    background-color: lightcoral;
+}

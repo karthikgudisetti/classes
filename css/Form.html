@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Form </title>
+    <style>
+        input{
+            border:none;
+            outline: none;
+            border-bottom: 1px solid;
+        }
+        h1{
+            
+            text-align: center;
+            height: auto;
+            width:auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Sports Physical Form</h1>
+    <form action="" method="">
+       <fieldset>
+        <h2>
+            Athlete Information
+        </h2>
+            <ul>
+            <li>
+                <label for="fname">Name:
+                    <input type="name" id="name" name="fname" placeholder="enter your name">
+                </label>
+                
+            </li><br>
+            <li>
+                <label for="tname">School/Team:
+                    <input type="name" id="tname" name="tname">
+                </label>
+                
+            </li><br>
+                <li>
+                <label for="name">Sport:
+                    <input type="name" id="sname" name="sname">
+                </label>
+                
+            </li><br>
+            <li>
+                <label for="pname">Parent/guardian Name:
+                    <input type="name" id="pname" name="pname">
+                </label>
+                
+            </li><br>
+            <li><label for="pname">Contact Number:
+                <input type="numbers" id="pname" name="pname" maxlength="10" >
+            </label>
+                
+            </li><br>
+                
+            </ul>
+        
+       </fieldset> 
+       <fieldset>
+        <h2>Medical History  for Athletes</h2>
+        <ul>
+            <li>
+                <label for="his">History of concusions:
+                    <input type="radio" id="his" name="his" requiered value="yes">yes
+                     <input type="radio" id="his" name="his" requiered value="no">no
+                </label>
+            </li><br>
+            <li>
+                <label for="pre" >Previous Surgaries:
+                    <input type="name" id="pre" name="pre">
+
+                </label>
+            </li><br>
+            <li>
+                <label for="fact">Any Bone Factures?
+                    <input type="radio" id="fact" name="fact" recquired value="yes">yes
+                    <input type="radio" id="fact" name="fact" recquired value="no">no
+                </label>
+            </li><br>
+            <li>
+                <label for="ass">Asthama or Breathing Problems?
+                    <input type="radio" id="ass" name="ass" recquired value="yes">yes
+                    <input type="radio" id="ass" name="ass" recquired value="no">no
+                </label>
+            </li>
+        </ul>
+       </fieldset>
+       <fieldset>
+        <h2>Fitness Assesment: </h2>
+        <table border="1" id="table-form">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Pass</th>
+                <th>fail</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cardiovascular</td>
+                    <td>
+                        <label for="cardio">
+                            <input type="radio" id="cardio" name="cardio">
+                        </label>
+                    </td>
+                    <td>
+                        <label for="cardio">
+                            <input type="radio" id="cardio" name="cardio">
+                        </label>
+                    </td>
+                    <td>
+                        <label for="comm">
+                            <input type="name" id="comm">
+                        </label>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>Flexibility</td>
+                    <td>
+                        <label for="flexb">
+                            <input type="radio" id="flexb" name="flexb">
+                        </label>
+                    </td>
+                     <td>
+                        <label for="flex">
+                            <input type="radio" id="flexb" name="flexb">
+                        </label>
+                    </td>
+                    <td>
+                        <label for="flexb">
+                            <input type="name" id="flexb">
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Strength</td>
+                    <td>
+                        <label for="stre">
+                            <input type="radio" id="stre" name="stre">
+                        </label>
+                    </td>
+                     <td>
+                        <label for="stre">
+                            <input type="radio" id="stre" name="stre">
+                        </label>
+                    </td>
+                    <td>
+                        <label for="flexb">
+                            <input type="name" id="flexb">
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>endurance</td>
+                    <td>
+                        <label for="endu">
+                            <input type="radio" id="endu">
+                        </label>
+                    </td>
+                     <td>
+                        <label for="endu">
+                            <input type="radio" id="endu" name="endu">
+                        </label>
+                    </td>
+                    <td>
+                        <label for="endu">
+                            <input type="name" id="endu" name="endu">
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+       </fieldset>
+    </form>
+    
+</body>
+</html>

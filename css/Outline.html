@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flipkart Clone</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color: #f1f3f6;
+        }
+
+        /* HEADER */
+
+        header{
+            height: 70px;
+            background-color: #2874f0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 40px;
+        }
+
+        .logo{
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .search-box{
+            width: 500px;
+        }
+
+        .search-box input{
+            width: 100%;
+            height: 40px;
+
+            border: none;
+            outline: none;
+
+            border-radius: 5px;
+
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        .menu{
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu button{
+            padding: 10px 20px;
+
+            border: none;
+            border-radius: 5px;
+
+            background-color: white;
+            color: #2874f0;
+
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            height: 80px;
+            background-color: white;
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            margin-top: 10px;
+        }
+
+        .nav-item{
+            text-align: center;
+        }
+
+        .circle{
+            height: 50px;
+            width: 50px;
+
+            background-color: #2874f0;
+            border-radius: 50%;
+
+            margin: auto;
+        }
+
+        .nav-item p{
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        /* HERO SECTION */
+
+        .hero{
+            height: 300px;
+            background-color: lightblue;
+
+            margin: 15px;
+
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* PRODUCTS */
+
+        .products{
+            padding: 20px;
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 20px;
+        }
+
+        .product-card{
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .product-card:hover{
+            transform: scale(1.05);
+        }
+
+        .product-image{
+            height: 180px;
+            width: 180px;
+
+            background-color: lightgray;
+
+            border-radius: 10px;
+
+            margin: auto;
+        }
+
+        .product-card h3{
+            margin-top: 15px;
+        }
+
+        .product-card p{
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer{
+            height: 80px;
+
+            background-color: #172337;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 20px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:1000px){
+
+            .products{
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .search-box{
+                width: 250px;
+            }
+
+        }
+
+        @media(max-width:600px){
+
+            header{
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            .navbar{
+                flex-wrap: wrap;
+                height: auto;
+                padding: 10px;
+            }
+
+            .products{
+                grid-template-columns: 1fr;
+            }
+
+            .hero{
+                font-size: 25px;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="">
+        </div>
+
+        <div class="menu">
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+
+    </header>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="nav-item">
+            <div class="circle"></div>
+            <p></p>
+        </div>
+
+        <div class="nav-item">
+            <div class="circle"></div>
+            <p></p>
+        </div>
+
+        <div class="nav-item">
+            <div class="circle"></div>
+            <p></p>
+        </div>
+
+        <div class="nav-item">
+            <div class="circle"></div>
+            <p></p>
+        </div>
+
+        <div class="nav-item">
+            <div class="circle"></div>
+            <p></p>
+        </div>
+
+        <div class="nav-item">
+            <div class="circle"></div>
+            <p></p>
+        </div>
+
+    </div>
+
+    <!-- HERO SECTION -->
+
+    <div class="hero">
+    
+    </div>
+
+    <!-- PRODUCTS -->
+
+    <section class="products">
+
+        <div class="product-card">
+
+            <div class="product-image"></div>
+
+            <h3></h3>
+
+            <p></p>
+
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image"></div>
+
+            <h3></h3>
+
+            <p></p>
+
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image"></div>
+
+            <h3></h3>
+
+            <p></p>
+
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image"></div>
+
+            <h3></h3>
+
+            <p></p>
+
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image"></div>
+
+            <h3></h3>
+
+            <p></p>
+
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image"></div>
+
+            <h3></h3>
+
+            <p></p>
+
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image"></div>
+
+            <h3></h3>
+
+            <p></p>
+
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image"></div>
+
+            <h3></h3>
+
+            <p></p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            
+        </h3>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+           height:500px;
+           width:500px;
+           display: grid;
+           border:2px solid black;
+           grid-template-columns: repeat(4,1fr);
+           grid-template-rows: repeat(3,1fr);
+           gap:20px;
+        }
+        .gr{
+            margin:8px;
+            border:2px solid black;
+            border-radius: 20px;
+        }
+        .g1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        .g2{
+            grid-row:1/2;
+            grid-column: 2/3;
+        }
+        .g3{
+            grid-row: 1/2;
+            grid-column:3/5 ;
+        }
+        .g4{
+            grid-row: 2/3;
+            grid-column:1/5 ;
+        }
+        .g5{
+            grid-row: 3/4;
+            grid-column:1/2 ;
+        }
+        .g6{
+            grid-row: 3/4;
+            grid-column: 2/5;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class=" gr g1"></div>
+        <div class=" gr g2"></div>
+        <div class=" gr g3"></div>
+        <div class=" gr g4"></div>
+        <div class=" gr g5"></div>
+        <div class=" gr g6"></div>
+    </div>
+    
+</body>
+</html>

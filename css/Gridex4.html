@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symatic</title>
+    <style>
+        .grid{
+         display: grid;
+         grid-template-columns: 1fr 2fr 1fr;
+         grid-template-rows: 1fr 2fr 1fr;
+         grid-template-areas: "header hea hem"
+             "sidebar main aside"
+             "footer foot fot";
+           
+             height:80vh;
+        }
+        .header{
+            display:grid;
+            grid-area: header;
+            border:2px solid black;
+        }
+        .hea{display:grid;
+            grid-area: hea;
+            border:2px solid black;
+        }
+        .hem{
+            display:grid;
+            grid-area:hem;
+            border:2px solid black;
+        }
+        .sidebar{
+            display:grid;
+            grid-area: sidebar;
+        border:2px solid black;
+        }
+        .main{
+            display:grid;
+            grid-area: main;;
+            border:2px solid black;
+        }
+        .aside{
+            display:grid;
+            grid-area: aside;
+            border:2px solid black;
+        }
+        .footer{
+            display:grid;
+            grid-area: footer;
+            border:2px solid black;
+            
+        }
+        .foot{
+            display:grid;
+            grid-area: foot;
+            border:2px solid black;
+        }
+        .fot{
+            display:grid;
+            grid-area: fot;
+            border:2px solid black;
+        }
+        .a{
+            height:30px;
+            width:30px;
+            border:2px solid black;
+        }
+        .i-1{
+            justify-self: end;
+            align-self: self-end;
+        }
+        .i-2{
+            justify-self: center;
+            align-self: center;
+        }
+        .i-3{
+            align-self: self-end;
+        }
+        .i-4{
+            justify-self: left;
+        }
+        .i-5{
+            justify-self: center;
+            align-self: center;
+        }
+        .i-6{
+          justify-self: right;
+        }
+        .i-7{
+            align-self: center;
+            justify-self: right;
+        }
+        .i-8{
+             align-self: center;
+            justify-self: left;
+        }
+        .i-9{
+             align-self: center;
+            justify-self: left; 
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header">
+            <div class="a i-1"></div>
+        </div>
+       
+        <div class="hea">
+             <div class="a i-2"></div>
+        </div>
+        
+        <div class="hem">
+             <div class="a i-3"></div>
+        </div>
+        <div class="sidebar">
+             <div class="a i-4" ></div>
+        </div>
+        <div class="main">
+             <div class="a i-5"></div></div>
+        <div class="aside">
+             <div class="a i-6"></div>
+        </div>
+        <div class="footer">
+             <div class="a i-7"></div>
+        </div>
+            
+    
+        <div class="foot">
+             <div class="a i-8"></div>
+        </div>
+        <div class="fot">
+             <div class="a i-9"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

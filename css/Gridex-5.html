@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 100px 150px 100px;
+            grid-template-rows: 100px 150px 100px;
+        }
+        .g{display: grid;
+            height:20px;
+            width:20px;
+            border:2px solid black;
+
+        }
+        .g-2{
+            align-self: end;
+            justify-self:center;
+
+        }
+        .g-3{
+            justify-self: right;
+        }
+        .g-4{
+            justify-self: left;
+            align-self: center;
+        }
+        .g-5{
+            align-self: center;
+            justify-self:center;
+        }
+        .g-6{
+            justify-self: right;
+            align-self: center;
+        }
+        .g-7{
+            justify-self: left;
+            align-self: end;
+        }
+        .g-8{justify-self: center;
+            
+        }
+        .g-9{
+            justify-self: right;
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="g g-1"> </div>
+        <div class="g g-2"> </div>
+        <div class="g g-3"> </div>
+        <div class="g g-4"> </div>
+        <div class="g g-5"> </div>
+        <div class="g g-6"> </div>
+        <div class="g g-7"> </div>
+        <div class="g g-8"> </div>
+        <div class="g g-9"> </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+.box{
+    height:70px;
+    width:70px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+.box:hover{
+    animation:slider 2s ease 4;
+}
+@keyframes slider {
+    0%{
+        transform:translate(0px,0px);
+    }
+    50%{
+        transform:translate(100px,100px) ;
+    }
+    75%{
+        transform:translate(200px,200px) ;
+    }
+    100%{
+        transform: translate(300px,300px);
+    }
+    
+    
+}
+.s2{
+    margin-top: 70px;
+    margin-left:100px;
+}
+.s3{
+     margin-top: 80px;
+    margin-left:200px;
+
+}
+.s4{
+    margin-top: 80px;
+    margin-left:300px;
+}

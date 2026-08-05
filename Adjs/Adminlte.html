@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminLTE 4 Clone</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#212529;
+    color:white;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:280px;
+    background:#343a40;
+    border-right:1px solid #444;
+    position:fixed;
+    height:100%;
+    overflow:auto;
+}
+
+.logo{
+    height:70px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:0 25px;
+    border-bottom:1px solid #4f5660;
+    font-size:28px;
+    font-weight:600;
+}
+
+.logo i{
+    background:#fff;
+    color:#343a40;
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+}
+
+.menu{
+    list-style:none;
+    padding:20px 10px;
+}
+
+.menu li{
+    padding:15px;
+    margin-bottom:8px;
+    border-radius:8px;
+    display:flex;
+    gap:15px;
+    align-items:center;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.menu li:hover{
+    background:#4d5359;
+}
+
+.active{
+    background:#495057;
+}
+
+/* Main */
+
+.main-content{
+    margin-left:280px;
+    width:100%;
+}
+
+/* Navbar */
+
+.navbar{
+    height:70px;
+    background:#2b3035;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    border-bottom:1px solid #444;
+}
+
+.nav-left,
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-left a{
+    text-decoration:none;
+    color:white;
+}
+
+.nav-right img{
+    width:40px;
+    border-radius:50%;
+}
+
+/* Title */
+
+.page-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px;
+}
+
+.page-title h1{
+    font-size:45px;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:0 30px;
+}
+
+.card{
+    padding:25px;
+    border-radius:10px;
+    min-height:170px;
+    position:relative;
+}
+
+.card h2{
+    font-size:55px;
+}
+
+.card p{
+    margin-top:15px;
+    font-size:22px;
+}
+
+.card span{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    text-align:center;
+    padding:12px;
+    background:rgba(0,0,0,.15);
+}
+
+.blue{
+    background:#0d6efd;
+}
+
+.green{
+    background:#198754;
+}
+
+.yellow{
+    background:#ffc107;
+    color:black;
+}
+
+.red{
+    background:#dc3545;
+}
+
+/* Charts */
+/*
+#empTable{
+    color:white;
+}
+
+#empTable th{
+    background:#495057;
+    position:sticky;
+    top:0;
+}
+
+#empTable th,
+#empTable td{
+    border:1px solid #555;
+    padding:12px;
+}
+
+#empTable tbody tr:nth-child(even){
+    background:#343a40;
+}
+
+#empTable tbody tr:hover{
+    background:#0d6efd;
+}
+#juniorTable{
+    width:100%;
+    color:white;
+}
+
+#juniorTable th,
+#juniorTable td{
+    border:1px solid #555;
+    padding:10px;
+}
+
+#juniorTable th{
+    background:#495057;
+    position:sticky;
+    top:0;
+}
+
+#juniorTable tbody tr:nth-child(even){
+    background:#343a40;
+}
+
+ #juniorTable tbody tr:hover{
+    background:#198754;
+}
+.charts{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    padding:30px;
+}
+
+.chart-card,
+.map-card{
+    background:#2b3035;
+    border-radius:10px;
+    border:1px solid #3d444b;
+    overflow:hidden;
+}
+
+.chart-card h3,
+.map-card h3{
+    padding:20px;
+    border-bottom:1px solid #444;
+} */
+
+/* Fake Chart */
+
+/* .fake-chart{
+    height:420px;
+    position:relative;
+    background:
+    repeating-linear-gradient(
+    to top,
+    transparent,
+    transparent 69px,
+    rgba(255,255,255,.07) 70px
+    );
+}
+
+.line{
+    position:absolute;
+    width:90%;
+    height:4px;
+    border-radius:50px;
+}
+
+.line1{
+    background:#0d6efd;
+    top:55%;
+    left:5%;
+    transform:rotate(-10deg);
+}
+
+.line2{
+    background:#20c997;
+    top:40%;
+    left:5%;
+    transform:rotate(5deg);
+} */
+
+/* Map */
+
+/* .map{
+    height:320px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:180px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    text-align:center;
+    padding:20px;
+    border-top:1px solid #444;
+} */
+
+/* Bottom */
+
+.bottom{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:0 30px 30px;
+}
+
+.widget{
+    background:#2b3035;
+    padding:30px;
+    border-radius:10px;
+    border:1px solid #3f464d;
+}
+
+.widget h3{
+    margin-bottom:15px;
+}
+
+.widget p{
+    font-size:32px;
+    font-weight:bold;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .charts{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        width:80px;
+    }
+
+    .logo span,
+    .menu li{
+        font-size:0;
+    }
+
+    .main-content{
+        margin-left:80px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .bottom{
+        grid-template-columns:1fr;
+    }
+
+    .page-title{
+        flex-direction:column;
+        gap:15px;
+    }
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-a"></i>
+            <span>AdminLTE 4</span>
+        </div>
+
+        <ul class="menu">
+            <li class="active">
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+            </li>
+
+            <li>
+                <i class="fa-solid fa-palette"></i>
+                Theme Generate
+            </li>
+
+            <li>
+                <i class="fa-solid fa-cube"></i>
+                Widgets
+            </li>
+
+            <li>
+                <i class="fa-solid fa-layer-group"></i>
+                Layout Options
+            </li>
+
+            <li>
+                <i class="fa-solid fa-tree"></i>
+                UI Elements
+            </li>
+
+            <li>
+                <i class="fa-solid fa-envelope"></i>
+                Mailbox
+            </li>
+
+            <li>
+                <i class="fa-solid fa-file"></i>
+                Forms
+            </li>
+
+            <li>
+                <i class="fa-solid fa-table"></i>
+                Tables
+            </li>
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        
+        <header class="navbar">
+
+            <div class="nav-left">
+                <i class="fa-solid fa-bars"></i>
+                <a href="#">Live Preview</a>
+                <a href="#">Documentation</a>
+            </div>
+
+            <div class="nav-right">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-message"></i>
+                <i class="fa-regular fa-bell"></i>
+                <i class="fa-solid fa-expand"></i>
+                <img src="https://media.licdn.com/dms/image/v2/D5635AQHBbj9C0ifmhA/profile-framedphoto-shrink_800_800/B56Zx2oTbtJQAk-/0/1771516803143?e=1782280800&v=beta&t=We4jbYYhRo19Yqf9i4BeK1XNnMrBXPumjIjREfBq3bY" alt="">
+                <span>Karthik Gudisetti</span>
+            </div>
+
+        </header>
+
+        
+        <div class="page-title">
+            <h1>Dashboard</h1>
+            <span>Home / Dashboard</span>
+        </div>
+
+        
+        <section class="cards">
+
+            <div class="card blue">
+                <h2 id="order">150</h2>
+                <p>New Orders</p>
+                <!-- <span>More Info</span> -->
+            </div>
+
+            <div class="card green">
+                <h2 id="gstp">53%</h2>
+                <p id="gst">Bounce Rate</p>
+                <!-- <span>More Info</span> -->
+            </div>
+
+            <div class="card yellow">
+                <h2 id="user1">44</h2>
+                <p>User Registrations</p>
+                <!-- <span>More Info</span> -->
+            </div>
+
+            <div class="card red">
+                <h2>65</h2>
+                <p>Unique Visitors</p>
+                <!-- <span>More Info</span> -->
+            </div>
+
+        </section>
+
+      
+        <section class="charts">
+
+    <div class="chart-card">
+        <span>More Info</span>
+        <h3 style="background-color: cornflowerblue;">Employee Product Details</h3>
+
+        <div style="padding:20px; max-height:500px; overflow-y:auto;">
+
+            <table id="empTable" style="width:100%; border-collapse:collapse; text-align:left;">
+                <thead style="background:#495057;">
+                    <tr>
+                        <th style="padding:10px;">Employee</th>
+                        <th style="padding:10px;">Product</th>
+                        <th style="padding:10px;">Price</th>
+                        <th style="padding:10px;">GST (18%)</th>
+                        <th style="padding:10px;">Total</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="map-card">
+   <span>More Info</span>
+    <h3 style="background-color: cornflowerblue;">Junior Employee Product Details</h3>
+
+    <div style="padding:20px; max-height:500px; overflow-y:auto;">
+
+        <table id="juniorTable" style="width:100%; border-collapse:collapse; text-align:left;">
+
+            <thead style="background:#495057;">
+                <tr>
+                    <th>Name</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>GST</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody id="juniorBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</section>
+
+        
+        <section class="bottom">
+
+            <div class="widget">
+                <h3>Revenue</h3>
+                <p>$52,000</p>
+            </div>
+
+            <div class="widget">
+                <h3>Visitors</h3>
+                <p>124K</p>
+            </div>
+
+            <div class="widget">
+                <h3>Orders</h3>
+                <p>7,540</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

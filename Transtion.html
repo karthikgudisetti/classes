@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .container{
+            height:500px;
+            width:600px;
+            border:2px solid pink;
+        }
+        .butt{
+            height: 50px;
+            width:50px;
+            background-color: blue;
+              transition: all 3s ease;
+        }
+        .butt:hover{
+            transform: translate(300px,200px) scale(2) rotate(360deg);
+           
+            border-radius: 50%;
+            background-color: rgb(148, 247, 232);
+            
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="butt"></div>
+    </div>
+    
+    
+</body>
+</html>

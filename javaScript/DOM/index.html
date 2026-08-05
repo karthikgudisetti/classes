@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Documnet Object Model)</title>
+    <style>
+        /* .heading{
+            color:red;
+        } */
+        .karthik{
+            height:100px;
+            width:200px;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <h1 class="heading" id="head1">Welcome to the DOm class</h1>
+    <h1 class="heading" id="head2">Welcome to the DOm class</h1>
+    <h1 class="heading" id="head3">Welcome to the DOm class</h1> -->
+    
+    <!-- <div class="karthik"></div> -->
+
+     <div class="container"></div>
+     <p class="main">This the main paragraph</p>
+
+    <script>
+        // let he=document.getElementsByTagName('h1');
+        // he[0].innerText="hello Buddies"                //it changes the text which was present in the present html tags
+        // console.log(he);
+
+        // let heading=document.getElementById("head1");
+        // console.log(heading);
+        // console.dir(heading);
+        // heading.style.color="blue"; //getElementByIdsName()
+
+        
+        // let division=document.querySelector('.karthik');
+        //  console.log(division);
+        // setTimeout(()=>{
+        //     division.style.height="300px";
+        //     division.style.width="300px";
+        //     division.style.backgroundColor="blue";
+
+        // },3000)
+
+
+        // let ani=document.querySelector('.butt');
+        // ani.style.height="50px";
+        // ani.style.width="100px";
+        // ani.style.backgroundColor="yellow";
+        // ani.style.borderColor="red";
+        // setTimeout(()=>{
+        //     ani.style.height="300px";
+        //     ani.style.width="300px";
+        //     ani.style.backgroundColor="blue";
+        //     ani.style.borderRadius="50%"
+
+        // },3000)
+
+       let cont=document.querySelector('.container');
+       let mpara=document.querySelector('.main');
+       mpara.innerHTML="<p> my name is karthik<p>";
+        cont.style.height="100px";
+        cont.style.width="200px";
+        cont.style.border="3px";
+        cont.style.borderColor="black";
+        let name1=prompt("enyter the name 1")
+          let name2=prompt("enyter the name 2")
+            let name3=prompt("enyter the name 3")
+            let name4=prompt("enter trhe 4 th name")
+        let arr=[name1,name2,name3,name4];
+        let string=``
+        arr.forEach((nam)=>{
+            string+=`<li>${nam}`
+        })
+        cont.innerHTML=`<ul>${string}</ul>`
+         
+    //    setTimeout(()=>{
+    //     cont.style.borderColor="black";
+    //      let name1=prompt("enyter the name 1")
+    //       let name2=prompt("enyter the name 2")
+    //         let name3=prompt("enyter the name 3")
+            
+
+    //     cont.innerHTML=`<ul><li>${name1}</li><li>${name2}</li><li>${name3}</li></ul>`;
+    //    },3000)
+        
+       console.dir(cont)
+        
+    </script>
+</body>
+</html>

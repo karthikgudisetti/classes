@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<body>
+    <div class="container">
+        <div class="g1"></div>
+         <div class="g2"></div>
+          <div class="g3"></div>
+           <div class="g4"></div>
+            <div class="g5"></div>
+             <div class="g6"></div>
+              <div class="g7"></div>
+               <div class="g8"></div>
+                <div class="g9"></div>
+                
+        
+        
+    </div>
+    <script>
+        let cont=document.querySelector('.container');
+        cont.style.height="600px";
+        cont.style.width="600px";
+        
+        cont.style.border="2px solid black";
+        cont.style.display="grid";
+        cont.style.gridTemplateColumns="1fr 1fr 1fr";
+        cont.style.gridTemplateRows="1fr 1fr 1fr";
+        cont.style.marginLeft="400px"
+        cont.style.marginTop="45px";
+       let g1=document.querySelector('.g1');
+       g1.style.gridRow ="1 / 2";
+       g1.style.gridColumn = " 1/2 ";
+       g1.style.backgroundColor="red";
+       let g3=document.querySelector('.g3');
+       g3.style.gridRow ="1 / 2";
+       g3.style.gridColumn = " 3/4 ";
+       g3.style.backgroundColor="red";
+       let g5=document.querySelector('.g5');
+       g5.style.gridRow ="2/ 3";
+       g5.style.gridColumn = " 2/3 ";
+       g5.style.backgroundColor="red";
+       let g7=document.querySelector('.g7');
+       g7.style.gridRow ="3/ 4";
+       g7.style.gridColumn = " 1/2";
+       g7.style.backgroundColor="red";
+        let g9=document.querySelector('.g9');
+       g9.style.gridRow ="3/ 4";
+       g9.style.gridColumn = " 3/4";
+       g9.style.backgroundColor="red";
+    </script>
+</body>
+</html>

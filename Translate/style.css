@@ -1,0 +1,59 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+html,body{
+    height:100%;
+
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-image: url(https://www.paruluniversity.ac.in/master_gujarat_2026_gsn/assets/images/hero/banner-desktop.webp);
+    background-size: cover;
+    background-position: center;
+    height:400px;
+    width:400px;
+    background-color: darkgrey;
+    display:flex;
+    flex-wrap: wrap;
+    
+   
+   
+}
+.box{
+    height:200px;
+    width:200px;
+    background-color: blue;
+    transition:all 6s ease;
+}
+.b1{
+    transform-origin: top left;
+}
+.b2{
+    transform-origin: top right;
+}
+.b3{
+    transform-origin:bottom left ;
+}
+.b4{
+    transform-origin: bottom right;
+}
+
+.container:hover{
+    .b1{
+    transform:rotate(90deg);
+}
+.b2{
+    transform:rotate(90deg);
+}
+.b3{
+    transform:rotate(90deg);
+}
+.b4{
+    transform:rotate(90deg);
+}
+}

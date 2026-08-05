@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#111;
+}
+
+.infinity{
+    position:relative;
+    width:120px;
+    height:60px;
+}
+
+.infinity span{
+    position:absolute;
+    width:40px;
+    height:40px;
+    border:6px solid cyan;
+    border-radius:50%;
+    animation:move 1.5s linear infinite;
+}
+
+.infinity span:last-child{
+    animation-delay:.75s;
+}
+
+@keyframes move{
+
+    0%{
+        left:0;
+    }
+
+    50%{
+        left:80px;
+    }
+
+    100%{
+        left:0;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <div class="infinity">
+    <span></span>
+    <span></span>
+</div>
+    
+</body>
+</html>

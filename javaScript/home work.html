@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //question 1
+        let numbers=[2,5,8,11,14,17,20];
+        let result=numbers.filter((nums)=>{
+          return nums%2===0;
+        })
+        .map((nums)=>{
+           return nums*nums;
+        });
+        console.log(result);
+
+
+        //question 2
+        let names=["priya","rahul","anil","sara"];
+        let upper=names.map((name)=>
+            name.toUpperCase());
+        console.log(upper);
+
+        //question 3
+        let arr=[34,12,89,53,90,7];
+        let max=arr.reduce((prev,curr)=>{
+            return curr>prev?curr:prev;
+        })
+        console.log(max);
+
+        //question 4
+        let products=[
+            {name:"laptop",price:5000,category:"Electronics"},
+            {name:"shirt",price:1000,category:"Clothing"},
+            {name:"moblie",price:25000,category:"Electronics"},
+            {name:"shoes",price:2000,category:"footwear"},
+            {name:"TV",price:40000,category:"Electronics"},
+        ]
+        let filtercase=products.filter((flit)=>{
+            return flit.category==="Electronics";
+        })
+        .map((flit)=>{
+            return flit.name;
+        })
+        console.log(filtercase);
+
+        //question 5
+        let students=[
+            {name:"Ravi",marks:99},
+            {name:"priya",marks:89},
+            {name:"anil",marks:60},
+            {name:"sara",marks:90},
+            {name:"Rahul",marks:40},
+
+        ]
+    </script>
+</body>
+</html>

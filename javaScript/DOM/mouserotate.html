@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio</title>
+</head>
+<style>
+    .container{
+        margin: 0;
+        height: 100vh;
+    }
+    .box{
+        height:30px;
+        width: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+        position: relative;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+
+</body>
+<script>
+    let point=document.querySelector('.box');
+    function Handler(event) {
+        let x=event.clientX;
+        let y=event.clientY;
+        point.style.left=x+'px';
+        point.style.top=y+'px';
+        point.style.backgroundColor="#11FC0D"
+    }
+    document.addEventListener('mousemove',Handler);
+</script>
+</html>

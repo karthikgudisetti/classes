@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+        }
+        .display{
+            height: 100px;
+            width: 300px;
+            border: 2px solid black;
+            margin: 10px auto;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display">0</div>
+        <div class="buttons">
+            <button class="operator" onclick="clearScreen()">AC</button>
+            <button class="operator" onclick="deleteChar()">DEL</button>
+            <button class="operator" onclick="appendValue('%')">%</button>
+            <button class="operator" onclick="appendValue('/')">÷</button>
+            
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button class="operator" onclick="appendValue('*')">×</button>
+            
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button class="operator" onclick="appendValue('-')">−</button>
+            
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button class="operator" onclick="appendValue('+')">+</button>
+            
+            <button class="zero" onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+            
+        </div>
+    </div>
+    <script>
+    const display = document.querySelector(".display");
+
+    function appendValue(value) {
+        if (display.innerText === "0") {
+            display.innerText = value;
+        } else {
+            display.innerText += value;
+        }
+    }
+
+    function clearScreen() {
+        display.innerText = "0";
+    }
+
+    function deleteChar() {
+        let text = display.innerText;
+        if (text.length > 1) {
+            display.innerText = text.slice(0, -1);
+        } else {
+            display.innerText = "0";
+        }
+    }
+
+    function calculate() {
+        try {
+            let expression = display.innerText;
+
+            if (expression === "") return;
+
+            let answer = eval(expression);
+
+            if (!isFinite(answer)) {
+                display.innerText = "Error";
+            } else {
+                display.innerText = parseFloat(answer.toFixed(8));
+            }
+        } catch (error) {
+            display.innerText = "Error";
+            setTimeout(() => {
+                clearScreen();
+            }, 1500);
+        }
+    }
+</script>
+</body>
+</html>

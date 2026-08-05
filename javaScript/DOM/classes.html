@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height:400px;
+            width:400px;
+            border:2px solid black;
+            display:flex;
+            flex-direction:column;
+            flex-wrap: nowrap;
+        
+    }
+    .class1{
+        height:20px;
+        width:20px;
+          
+           border:1px solid black;
+
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        
+    </div>
+    <button class="btn">click me</button>
+    <script>
+let btn = document.querySelector(".btn");
+let cont = document.querySelector(".container");
+
+btn.addEventListener("click", () => {
+
+    for (let i = 0; i < 25; i++) {
+        let box = document.createElement("div");
+        box.classList.add("class1");
+        cont.appendChild(box);
+    }
+
+});
+
+</script>
+</body>
+</html>
